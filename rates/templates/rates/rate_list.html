@@ -35,6 +35,7 @@
                                             <th>Date</th>
                                             <th>Petrol Rate</th>
                                             <th>Diesel Rate</th>
+                                            <th> Action</th>
 
                                         </tr>
                                     </thead>
@@ -43,6 +44,7 @@
                                             <th>Date</th>
                                             <th>Petrol Rate</th>
                                             <th>Diesel Rate</th>
+                                            <th>Action</th>
 
                                         </tr>
                                     </tfoot>
@@ -52,6 +54,11 @@
                                         <td>{{ rate.date }}</td>
                                         <td>{{ rate.petrol_price }}</td>
                                         <td>{{ rate.diesel_price }}</td>
+                                       <th>
+                                           <a href="{% url 'rate-update'  rate.id %}" class="btn btn-info"> update</a>
+                                           <a href="{% url 'rate-delete'  rate.id %}" class="btn btn-danger"> Delete</a>
+                                       </th>
+
                                        </tr>
                                    {% endfor %}
                                    </tbody>

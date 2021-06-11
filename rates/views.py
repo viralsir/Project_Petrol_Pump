@@ -17,7 +17,8 @@ class UpdateRateView(UpdateView):
 
 class DeleteRateView(DeleteView):
     model = rate
-
+    success_url = '/rates/view'
+#model_confirm_delete.html
 class DetailRateView(DetailView):
     model = rate
 
