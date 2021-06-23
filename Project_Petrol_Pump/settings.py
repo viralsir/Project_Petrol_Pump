@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -32,6 +33,9 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'rates',
+    'employee',
+    'nozzel',
+    'tank',
     'crispy_forms',
     'users.apps.UsersConfig',
     'django.contrib.admin',
@@ -130,3 +134,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK='bootstrap4'
 LOGIN_URL='login'
 LOGIN_REDIRECT_URL='home-page'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_URL='/media/'
