@@ -28,6 +28,8 @@ urlpatterns = [
     path("rates/",include("rates.urls")),
     path("nozzel/", include("nozzel.urls")),
     path("employee/", include("employee.urls")),
-    path("tank/", include("tank.urls"))
+    path("tank/", include("tank.urls")),
+    path("creditor/", include("creditor.urls")),
+    path("vehicle/", include("vehicle.urls"))
 ]
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

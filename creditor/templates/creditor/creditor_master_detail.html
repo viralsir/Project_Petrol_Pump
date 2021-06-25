@@ -1,0 +1,95 @@
+{% extends "users/layout.html" %}
+{% load static %}
+{% load crispy_forms_field %}
+{% block body %}
+
+                    <div class="card profile-card">
+                        <div class="profile-header">&nbsp;</div>
+                        <div class="profile-body">
+                            <div class="image-area">
+                                <img src="C:\Users\ayush\OneDrive\Desktop\Ayush\AyushPhoto.jpg" width="130px" height="130px" alt="AdminBSB - Profile Image" />
+                            </div>
+                            <div class="content-area">
+                                <h4>{{ object.fname }} {{ object.mname }} {{ object.lname }}</h4>
+                                <p>{{ object.companyname }}</p>
+
+                            </div>
+                        </div>
+                        <div class="profile-footer">
+                            <ul>
+                                <li>
+                                    <span>Address: -</span><span>{{ object.block }} {{ object.street }}, {{ object.area }}, {{ object.city }}, {{ object.state }}, {{ object.country }} </span>
+                                </li>
+                                <li>
+                                    <span>contact:</span><span>Phone no.: -{{ object.mobile }}  telephone: -{{ object.officeno }}</span>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <div class="card card-about-me">
+
+                        <div class="body">
+                            <ul>
+                                <li>
+                                    <div class="title">
+                                        <i class="fa fa-birthday-cake"></i>Contact person name
+                                    </div>
+                                    <div class="content">
+                                        {{ object.contactpersonname }}
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <i class="material-icons">location_on</i>
+                                        Contact person Mobile
+                                    </div>
+                                    <div class="content">
+                                        {{ object.contactpersonmobile }}
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <i class="material-icons">edit</i>
+                                        Home no.
+                                    </div>
+                                    <div class="content">
+                                       {{ object.homeno }}
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <i class="material-icons"></i>
+                                        GST number
+                                    </div>
+                                    <div class="content">
+                                        {{ object.gstno }}
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <i class="material-icons"></i>
+                                        Pending Balance
+                                    </div>
+                                    <div class="content">
+                                        {{ object.pendingbalance }}
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <i class="material-icons"></i>
+                                        Creation Date
+                                    </div>
+                                    <div class="content">
+                                        {{ object.creationdate }}
+                                    </div>
+                                </li>
+
+
+
+                            </ul>
+                        </div>
+                    </div>
+{% endblock %}
